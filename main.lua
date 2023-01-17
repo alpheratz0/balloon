@@ -40,5 +40,5 @@ function love.update()
 				snd_sad_violin:play()
 			end
 		end
-	end	
+	end
 end

@@ -99,7 +99,7 @@ end
 function love.load()
 	love.window.setTitle('dont pop it')
 	love.window.setMode(640, 480, { resizable=true })
-	love.math.setRandomSeed(love.timer.getTime() * 100000)
+	love.math.setRandomSeed(os.time())
 	b = Balloon:create('balloon', love.math.random() > 0.5 and BalloonDeathSound.Scream or BalloonDeathSound.Explosion)
 end
 

@@ -126,7 +126,7 @@ function love.update(dt)
 		b.state = BalloonState.InHeaven
 		b.heavenSound:play()
 		b:move(0, love.graphics.getHeight() - b.x)
-	elseif b.state == BalloonState.InHeaven then
+	elseif b.state == BalloonState.InHeaven and b.y + b.image:getHeight() >= 0 then
 		b:move(0, -100*dt)
 	end
 end

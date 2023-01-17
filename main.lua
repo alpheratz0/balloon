@@ -33,7 +33,8 @@ function Balloon:create(name, deathSound)
 	balloon.deathSound = love.audio.newSource(deathSound, 'static')
 	balloon.afterDeathSound = love.audio.newSource('assets/sad_violin.wav', 'stream')
 	balloon.heavenSound = love.audio.newSource('assets/heaven.wav', 'stream')
-	balloon.deathMessage = love.graphics.newText(love.graphics.newFont(30), 'RIP :((((( 2023-2023')
+	balloon.deathMessageStr = string.format(':(\nRIP %s (2023-2023)\n', balloon.name)
+	balloon.deathMessage = love.graphics.newText(love.graphics.newFont(30), balloon.deathMessageStr)
 	balloon.timeInPurgatory = balloon.deathSound:getDuration() + balloon.afterDeathSound:getDuration()
 	return balloon
 end

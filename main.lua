@@ -99,6 +99,7 @@ end
 function love.load()
 	love.window.setTitle('dont pop it')
 	love.window.setMode(640, 480, { resizable=true })
+	love.mouse.setCursor(love.mouse.newCursor(love.image.newImageData('assets/pin.png'), 6, 23))
 	love.math.setRandomSeed(os.time())
 	b = Balloon:create('balloon', love.math.random() > 0.5 and BalloonDeathSound.Scream or BalloonDeathSound.Explosion)
 end

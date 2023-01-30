@@ -2,9 +2,3 @@ balloon is a dontpopit.com clone using love2d.
 
 Please make sure that you have love2d installed on
 your system.
-
-Assets:
-	balloon:
-		https://freesvg.org/red-color-balloon-vector-graphics
-	balloon exploding sound:
-		https://mixkit.co/free-sound-effects/balloon

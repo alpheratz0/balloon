@@ -38,3 +38,12 @@ function Rect:move_to_center()
 	self.x = (win_w-self.w)/2
 	self.y = (win_h-self.h)/2
 end
+
+function Rect:contains_point(x,y)
+	if x >= self.x and y >= self.y and
+		x < self.x + self.w and y < self.y + self.h then
+		return true
+	else
+		return false
+	end
+end

@@ -56,14 +56,10 @@ function Balloon:update(dt)
 	if love.mouse.isDown(1) and not self.is_popped then
 		local x, y = love.mouse.getPosition()
 
-		x = x - self.rect.x
-		y = y - self.rect.y
+		if self.rect:contains_point(x, y) then
+			x = x - self.rect.x
+			y = y - self.rect.y
 
-		if x >= 0
-			and y >= 0
-			and x < self.texture:getWidth()
-			and y < self.texture:getHeight()
-			then
 			local _, _, _, alpha = self.texture_data:getPixel(x, y)
 			if alpha ~= 0 then
 				self.is_popped = true

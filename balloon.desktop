@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=balloon
+Exec=balloon %f
+Type=Application
+Categories=Game;
+Terminal=false
+Icon=love
+NoDisplay=true
